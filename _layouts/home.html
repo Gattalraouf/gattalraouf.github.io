@@ -23,6 +23,13 @@
         {% include thoughts.html %}
       </div>
     {% endunless %}
+
+    {% unless talks_total == 0 %}
+    <div class="my-6">
+      {% include talks.html %}
+    </div>
+  {% endunless %}
+
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
@@ -47,6 +54,11 @@
         {% unless posts_total == 0 %}
           {% include thoughts.html %}
         {% endunless %}
+
+        {% unless talks_total == 0 %}
+          {% include talks.html %}
+        {% endunless %}
+
       </div>
     </div>
   </div>
